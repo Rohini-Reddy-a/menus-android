@@ -1,50 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/popup_menu_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Show Popop Menu"
-        android:textSize="32sp" />
-
-    <TextView
-        android:id="@+id/list_popup_menu_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Show List Popup Menu"
-        android:textSize="32sp" />
-
-    <TextView
-        android:id="@+id/context_menu_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Please React To Me"
-        android:textSize="32sp" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_menu"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    <LinearLayout
+        android:id="@+id/parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:hint="Numbers">
+        android:orientation="vertical">
 
-        <AutoCompleteTextView
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/popup_menu_card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none" />
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="16dp">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/first_gradient_bg"
+                android:fontFamily="serif-monospace"
+                android:padding="24dp"
+                android:text="Show Popop Menu"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="?attr/colorOnSecondary" />
 
-</LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/list_popup_menu_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/second_gradient_bg"
+                android:fontFamily="serif-monospace"
+                android:padding="24dp"
+                android:text="Show List Popup Menu"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="?attr/colorOnSecondary" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/context_menu_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/third_gradient_bg"
+                android:fontFamily="serif-monospace"
+                android:padding="24dp"
+                android:text="Please React To Me"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="?attr/colorOnSecondary" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_menu"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="Numbers">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</ScrollView>

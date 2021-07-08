@@ -10,6 +10,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.appcompat.widget.ListPopupWindow
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 
@@ -23,12 +24,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         parent = findViewById(R.id.parent)
-        val showMenuTextView = findViewById<TextView>(R.id.popup_menu_text_view)
-        val showListPopupMenuTextView = findViewById<TextView>(R.id.list_popup_menu_text_view)
-        val showContextMenuTextView = findViewById<TextView>(R.id.context_menu_text_view)
+        val showMenuTextView = findViewById<MaterialCardView>(R.id.popup_menu_card_view)
+        val showListPopupMenuTextView = findViewById<MaterialCardView>(R.id.list_popup_menu_card_view)
+        val showContextMenuTextView = findViewById<MaterialCardView>(R.id.context_menu_card_view)
 
         showContextMenuTextView.setOnLongClickListener {
-
+            showSnackbar("Add Context Options and remove this")
             true
         }
 
