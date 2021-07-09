@@ -4,25 +4,25 @@
     <item
         android:id="@+id/option1"
         android:icon="@drawable/ic_launcher_background"
-        android:title="option 1" />
+        android:title="Planets" />
 
     <item
         android:id="@+id/option2"
-        android:title="option 2" />
+        android:title="Humans" />
 
     <item
         android:id="@+id/option3"
-        android:title="option 3">
+        android:title="Pets">
 
         <menu>
 
             <item
                 android:id="@+id/sub_1"
-                android:title="Sub 1" />
+                android:title="Cats" />
 
             <item
                 android:id="@+id/sub_2"
-                android:title="Sub 2" />
+                android:title="Dogs" />
 
         </menu>
 

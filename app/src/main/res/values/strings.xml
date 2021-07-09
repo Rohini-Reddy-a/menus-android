@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">menus-android</string>
+    <string name="app_name">Menus Android</string>
+    <string name="option_1">Like</string>
+    <string name="option_2">Dislike</string>
 </resources>
